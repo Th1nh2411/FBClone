@@ -1,0 +1,247 @@
+@import 'normalize.css';
+
+// @import '../../../node_modules/bootstrap/scss/bootstrap-grid.scss';
+/* vietnamese */
+@font-face {
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYXgKVElMYYaJe8bpLHnCwDKhd7eFb5N.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+
+/* vietnamese */
+@font-face {
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjSL9AI5sdO_q.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* vietnamese */
+@font-face {
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjQ76AI5sdO_q.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+
+/* vietnamese */
+@font-face {
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjWr7AI5sdO_q.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+// Nunino fonts
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    src: url(../../assets/fonts/Nunito-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: 'Nunito';
+    font-style: italic;
+    src: url(../../assets/fonts/Nunito-Italic-VariableFont_wght.ttf);
+}
+:root {
+    --primary-color: #0866ff;
+    --radial-gradient-bg: linear-gradient(45deg, #27be70 0%, #0c713d 100%);
+    --radial-gradient-bg-2: linear-gradient(45deg, #0c713d 0%, #27be70 100%);
+    --secondary-color: rgb(95, 95, 95);
+    --bg-color: #080b14;
+    --card-bg-color: #fff;
+    --default-layout-header-height: 56px;
+    --hover-color: #1f915633;
+    --default-layout-width: 100%;
+    --default-layout-horizontal-spacer: 16px;
+    --black: #000;
+    --white: #fff;
+    --text-color: #333;
+    // Search
+    --search-border-radius: 92px;
+    --search-height: 40px;
+    --search-space-height: 9px;
+    --subtitle-font-name: 'Island Moments', cursive;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
+
+html body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    overflow-y: overlay;
+}
+// Scroll bar
+html .dark-mode *::-webkit-scrollbar {
+}
+html .dark-mode *::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+html .dark-mode *::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0);
+}
+.dark-mode {
+    background-color: #242526;
+    color: white;
+}
+button,
+input,
+[tabindex] {
+    outline: none;
+    border: none;
+    font-family: 'Nunito', sans-serif;
+}
+
+.ant-input::placeholder,
+.ant-input-number-input::placeholder {
+    color: #888 !important;
+    font-weight: 500;
+}
+
+a[href] {
+    text-decoration: none;
+    color: #333;
+}
+.text-center {
+    text-align: center;
+}
+
+.w-100 {
+    width: 100% !important;
+}
+section {
+    padding: 50px 0;
+}
+.mt-1 {
+    margin-top: 1rem;
+}
+.mt-2 {
+    margin-top: 2rem;
+}
+.mt-3 {
+    margin-top: 3rem;
+}
+.mt-4 {
+    margin-top: 4rem;
+}
+.ml-1 {
+    margin-left: 1rem;
+}
+.ml-2 {
+    margin-left: 2rem;
+}
+.ml-3 {
+    margin-left: 3rem;
+}
+.ml-4 {
+    margin-left: 4rem;
+}
+.d-flex {
+    display: flex;
+}
+.align-center {
+    display: flex;
+    align-items: center;
+}
+.content-center {
+    display: flex;
+    justify-content: center;
+}
+.content-between {
+    display: flex;
+    justify-content: space-between;
+}
+.mr-16 {
+    margin-right: 16px;
+}
+.sep {
+    &::before {
+        content: '';
+        margin: 0 10px;
+        width: 1px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #cccccc69;
+    }
+}
+
+// Custom tippy tool tip
+body {
+    .tippy-box {
+        text-align: center;
+        padding: 10px;
+        border-radius: 8px;
+        line-height: 2rem;
+        background-color: rgb(241, 241, 241);
+        font-weight: 700;
+        color: rgb(52, 52, 52);
+        max-width: 50px;
+        // box-shadow: 0px 0px 0px 10px #000;
+    }
+    .tippy-arrow {
+        top: -8px;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+
+        border-bottom: 8px solid rgb(241, 241, 241);
+    }
+}
+.add-item {
+    animation: shakeUp 0.3s forwards ease-in-out;
+}
+// Input type
+
+// Keyframes
+@keyframes shakeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    50% {
+        transform: translateY(-50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes slideToast {
+    from {
+        opacity: 0;
+        transform: translateX(calc(100% + 32px));
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
